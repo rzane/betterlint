@@ -327,13 +327,13 @@ end
 ```ruby
 class GearPresenter
   attr_reader :gear
-  
+
   delegate :ratio, to: :gear
-  
+
   def initialize(gear)
     @gear = gear
   end
-  
+
   def ratio_string
     ratio.to_s
   end
@@ -368,3 +368,7 @@ the `coder` keyword argument.
 - And you've opted into 7.1 defaults (namely, `config.active_record.default_column_serializer = nil`)
 
 ...you can safely disable this cop, since failing to pass a deserializer will raise an exception.
+
+### Betterment/UnusedLet
+
+This cop identifies unused `let` definitions in RSpec tests. Note that `let!` is not flagged, since it has side effects.

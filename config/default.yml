@@ -117,6 +117,13 @@ Betterment/UnscopedFind:
   StyleGuide: '#bettermentunscopedfind'
   unauthenticated_models: []
 
+Betterment/UnusedLet:
+  Description: Detects unused let definitions in RSpec tests
+  SafeAutoCorrect: false
+  StyleGuide: '#bettermentunusedlet'
+  Include:
+    - spec/**/*_spec.rb
+
 Betterment/UseGlobalStrictLoading/ByDefaultForModels:
   Enabled: true
   SafeAutoCorrect: false
